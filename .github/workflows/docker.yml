@@ -35,3 +35,4 @@ jobs:
         KUBECTL_VERSION: "1.15"
       with:
         args: '"rollout status deployment/my-app"'
+  
