@@ -15,14 +15,3 @@ jobs:
         tag_with_ref: true
         tag_with_sha: true
         tags: ${{ github.sha }}
-    - uses: jtalk/k8s-deploy@v2
-      with:
-        namespace: 'myapp'
-        manifests: |
-            deployment.yaml
-            service.yaml
-        images: 'jtalk/myapp:${{ event.run_id }}'
-        imagepullsecrets: |
-          image-pull-secret1
-          image-pull-secret2
-        kubectl-version: 'latest'
